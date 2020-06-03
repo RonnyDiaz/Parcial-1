@@ -21,8 +21,15 @@ namespace Programa_1
                 Console.Write("Digite el numero de la tarjeta: ");
                 numerotarjeta = Convert.ToDouble(Console.ReadLine());
 
-                Console.WriteLine("El precio del producto es {0}, el pago se realizo con la tarjeta de serie {1}", producto, numerotarjeta);
-            }
+               if(numerotarjeta < 0) 
+               {
+                  Console.WriteLine("La tarjeta que ingreso es incorrecta"); 
+               }
+               else 
+               {
+               Console.WriteLine("El precio del producto es {0}, el pago se realizo con la tarjeta de serie {1}", producto, numerotarjeta);
+               }   
+             }
             else
             {
                 if(formapago.Equals("efectivo"))
